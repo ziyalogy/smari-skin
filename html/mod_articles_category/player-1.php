@@ -26,8 +26,8 @@ use Joomla\CMS\Language\Text;
 					<?php 
 						// Get Extrafields
 						$extrafields = new JRegistry($item->attribs);
-						$teamNumber = $extrafields->get('number');
-						$teamPosition = $extrafields->get('team_position');
+						$courseDuration = $extrafields->get('duration');
+						$courseAward = $extrafields->get('award');
 
 					?>
 						<div class="col">
@@ -104,13 +104,31 @@ use Joomla\CMS\Language\Text;
 										</div>
 									<?php endif; ?>
 
+																	<div class="row row-cols-1 row-cols-md-2 list-short-info">
+
+									<?php if($courseAward) :?>
+									<div class="col">
+										<span class="info-desc"><?php echo $courseAward ;?></span>
+									</div>
+									<?php endif ;?>
+
+									<?php if($courseDuration) :?>
+									<div class="col">
+										<span class="info-desc"><?php echo $courseDuration ;?></span>
+									</div>
+									<?php endif ;?>
+								</div>
+
 									<?php if ($params->get('show_tags', 0) && $item->tags->itemTags) : ?>
 										<div class="mod-articles-category-tags mt-3">
 											<?php echo JLayoutHelper::render('joomla.content.tags', $item->tags->itemTags); ?>
 										</div>
 									<?php endif; ?>
 
-									<?php if ($params->get('show_readmore')) : ?>
+
+								</div>
+							</div>
+																<?php if ($params->get('show_readmore')) : ?>
 										<p class="articles-readmore">
 											<a class="articles-title <?php echo $item->active; ?>" href="<?php echo $item->link; ?>">
 												<?php if ($item->params->get('access-view') == false) : ?>
@@ -119,7 +137,7 @@ use Joomla\CMS\Language\Text;
 													<?php echo $readmore; ?>
 													<?php echo JHtml::_('string.truncate', $item->title, $params->get('readmore_limit')); ?>
 												<?php elseif ($params->get('show_readmore_title', 0) == 0) : ?>
-													<span><?php echo Text::_('TPL_READ_MORE'); ?></span>
+													<span><?php echo Text::_('Register Now'); ?></span>
 												<?php else : ?>
 													<?php echo Text::_('MOD_ARTICLES_CATEGORY_READ_MORE'); ?>
 													<?php echo JHtml::_('string.truncate', $item->title, $params->get('readmore_limit')); ?>
@@ -127,8 +145,6 @@ use Joomla\CMS\Language\Text;
 											</a>
 										</p>
 									<?php endif; ?>
-								</div>
-							</div>
 						</div>
 				<?php $i++; endforeach; ?>
 			</div>
