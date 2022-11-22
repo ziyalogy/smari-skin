@@ -191,7 +191,9 @@ $teamShot = $extrafields->get('team_shot');
 									</li>
 								<?php endif ;?>
 							</ul>
+
 						</div>
+													<br/><br/><a href="/register" class="btn btn-danger">Register Now</a>
 					</div>
 				</div>
 
