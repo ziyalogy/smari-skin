@@ -221,3 +221,43 @@ color: var(--color-light);
     background: var(--color-black)!important;
     height: 100%;
 }
+.list-short-info {
+    margin-bottom: 2rem;
+}
+.mod-player-1 .article-content {
+    padding: 1.25rem 1.25rem;
+}
+.short-info-player .link-heading {
+    color: var(--color-light)!important;
+}
+.coaches .articles-title a{
+    color: var(--color-light)!important;
+}
+.acm-features.style-1 .feature-content > h2, .acm-features.style-1 .feature-content > .h2 {
+    margin-top: 0;
+    margin-bottom: 2.25rem;
+    max-width: max-content;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.acm-features.style-1 .feature-content {
+    max-width: max-content;
+    margin-bottom: 2.25rem;
+    padding: 3rem;
+}
+.btn.btn-outline-primary {
+    border-color: var(--color-black);
+    background: var(--color-black);
+    color: var(--color-light);
+}
+.btn.btn-outline-primary:hover {
+    border-color: var(--color-black);
+    background: var(--color-black) !important;
+    color: var(--color-text);
+}
+.btn{
+    outline: none !important;
+}
+a {
+    color: inherit;
+}

@@ -35,6 +35,21 @@ use Joomla\CMS\Language\Text;
 								<?php echo JLayoutHelper::render('joomla.content.intro_image', $item); ?>
 
 								<div class="article-content">
+									
+								<div class="row row-cols-1 row-cols-md-2 list-short-info">
+
+									<?php if($courseAward) :?>
+									<div class="col">
+										<span class="info-desc"><?php echo $courseAward ;?></span>
+									</div>
+									<?php endif ;?>
+
+									<?php if($courseDuration) :?>
+									<div class="col">
+										<span class="info-desc"><?php echo $courseDuration ;?></span>
+									</div>
+									<?php endif ;?>
+								</div>
 									<?php if($item->displayCategoryTitle || $item->displayDate || $params->get('show_author') || $item->displayHits) :?>
 									<div class="article-aside">
 										<div class="article-info">
@@ -71,6 +86,7 @@ use Joomla\CMS\Language\Text;
 					            <?php echo $teamNumber ;?>
 					          </div>
 					          <?php endif; ?>
+							  
 
 					          <div class="t-name">
 					            <!-- Title -->
@@ -104,20 +120,6 @@ use Joomla\CMS\Language\Text;
 										</div>
 									<?php endif; ?>
 
-																	<div class="row row-cols-1 row-cols-md-2 list-short-info">
-
-									<?php if($courseAward) :?>
-									<div class="col">
-										<span class="info-desc"><?php echo $courseAward ;?></span>
-									</div>
-									<?php endif ;?>
-
-									<?php if($courseDuration) :?>
-									<div class="col">
-										<span class="info-desc"><?php echo $courseDuration ;?></span>
-									</div>
-									<?php endif ;?>
-								</div>
 
 									<?php if ($params->get('show_tags', 0) && $item->tags->itemTags) : ?>
 										<div class="mod-articles-category-tags mt-3">
@@ -151,3 +153,34 @@ use Joomla\CMS\Language\Text;
 		<?php endif; ?>
 	</div>
 </div>
+<script>
+(function($){
+  jQuery(document).ready(function($) {
+    let owl = $("#mod-player-<?php echo $module->id; ?> .owl-carousel").owlCarousel({
+      addClassActive: true,
+      items: 3,
+      singleItem : true,
+      itemsScaleUp : true,
+      navText : ["<span class='fa fa-angle-left'></span>", "<span class='fa fa-angle-right'></span>"],
+      nav : false,
+      dots: false,
+      merge: false,
+      margin: 36,
+      dotsEach: true,
+      dotsData: false,
+      autoHeight: false,
+      loop: true,
+      autoplay: true,
+      responsive : {
+		    // breakpoint from 0 up
+		    0 : {
+		        items: 1,
+		    },
+		    992 : {
+		        items: 3,
+		    }
+			}
+    });
+  });
+})(jQuery);
+</script>
