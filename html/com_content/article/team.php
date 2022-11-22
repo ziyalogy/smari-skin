@@ -139,7 +139,7 @@ $teamShot = $extrafields->get('team_shot');
 						</div>
 
 						<div class="statics-wrap">
-							<h3><?php echo Jtext::_('Course info') ;?></h3>
+							<h3><?php echo Jtext::_('Bio') ;?></h3>
 
 							<ul>
 								<?php if($courseDuration) :?>

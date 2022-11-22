@@ -7,30 +7,37 @@
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-defined('_JEXEC') or die;
+defined('_JEXEC') or die();
 use Joomla\CMS\Language\Text;
 
-	$count = count($list);
-	$moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'), ENT_COMPAT, 'UTF-8');
+$count = count($list);
+$moduleclass_sfx = htmlspecialchars(
+    $params->get('moduleclass_sfx'),
+    ENT_COMPAT,
+    'UTF-8'
+);
 ?>
 <div id="mod-player-<?php echo $module->id; ?>" class="mod-articles-cw mod-player-1 <?php echo $moduleclass_sfx; ?>" >
 
 	<div class="container">
-		<?php if ($grouped) : ?>
+		<?php if ($grouped): ?>
 			<div class="alert alert-warning">
-				<?php echo text::_('TPL_NO_SUPPORT') ;?>
+				<?php echo text::_('TPL_NO_SUPPORT'); ?>
 			</div>
-		<?php else : ?>
+		<?php
+      // Get Extrafields
+      // Get Extrafields
+      ?>else: ?>
 			<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3  v-gutters">
-				<?php $i=1; foreach ($list as $item) : ?>
-					<?php 
-						// Get Extrafields
-						$extrafields = new JRegistry($item->attribs);
-						$courseDuration = $extrafields->get('duration');
-						$courseAward = $extrafields->get('award');
-						$teamPosition = $extrafields->get('team_position');
-
-					?>
+				<?php
+    $i = 1;
+    foreach ($list as $item): ?>
+					<?php
+     $extrafields = new JRegistry($item->attribs);
+     $courseDuration = $extrafields->get('duration');
+     $courseAward = $extrafields->get('award');
+     $teamPosition = $extrafields->get('team_position');
+     ?>
 						<div class="col">
 							<div class="item-inner">
 								<?php echo JLayoutHelper::render('joomla.content.intro_image', $item); ?>
@@ -39,40 +46,49 @@ use Joomla\CMS\Language\Text;
 									
 								<div class="row row-cols-1 row-cols-md-2 list-short-info">
 
-									<?php if($courseAward) :?>
+									<?php if ($courseAward): ?>
 									<div class="col">
-										<span class="info-desc"><?php echo $courseAward ;?></span>
+										<span class="info-desc"><?php echo $courseAward; ?></span>
 									</div>
-									<?php endif ;?>
+									<?php endif; ?>
 
-									<?php if($courseDuration) :?>
+									<?php if ($courseDuration): ?>
 									<div class="col">
-										<span class="info-desc"><?php echo $courseDuration ;?></span>
+										<span class="info-desc"><?php echo $courseDuration; ?></span>
 									</div>
-									<?php endif ;?>
+									<?php endif; ?>
 								</div>
-									<?php if($item->displayCategoryTitle || $item->displayDate || $params->get('show_author') || $item->displayHits) :?>
+									<?php if (
+             $item->displayCategoryTitle ||
+             $item->displayDate ||
+             $params->get('show_author') ||
+             $item->displayHits
+         ): ?>
 									<div class="article-aside">
 										<div class="article-info">
-											<?php if ($item->displayCategoryTitle) : ?>
+											<?php if ($item->displayCategoryTitle): ?>
 												<span class="category">
 													<?php echo $item->displayCategoryTitle; ?>
 												</span>
 											<?php endif; ?>
 											
-											<?php if ($params->get('show_author')) : ?>
+											<?php if ($params->get('show_author')): ?>
 												<span class="articles-writtenby">
-													<?php echo Text::_('TPL_BY').' '.'<b>'.$item->displayAuthorName.'</b>'; ?>
+													<?php echo Text::_('TPL_BY') .
+                 ' ' .
+                 '<b>' .
+                 $item->displayAuthorName .
+                 '</b>'; ?>
 												</span>
 											<?php endif; ?>
 
-											<?php if ($item->displayDate) : ?>
+											<?php if ($item->displayDate): ?>
 												<span class="articles-date">
 													<?php echo $item->displayDate; ?>
 												</span>
 											<?php endif; ?>
 
-											<?php if ($item->displayHits) : ?>
+											<?php if ($item->displayHits): ?>
 												<span class="articles-hits">
 													<i class="far fa-eye"></i> <?php echo $item->displayHits; ?>
 												</span>
@@ -82,9 +98,9 @@ use Joomla\CMS\Language\Text;
 									<?php endif; ?>
 
 									<div class="short-info-player">
-					          <?php if($teamNumber) :?>
+					          <?php if ($teamNumber): ?>
 					          <div class="t-number">
-					            <?php echo $teamNumber ;?>
+					            <?php echo $teamNumber; ?>
 					          </div>
 					          <?php endif; ?>
 							  
@@ -92,22 +108,22 @@ use Joomla\CMS\Language\Text;
 					          <div class="t-name">
 					            <!-- Title -->
 											<div class="title">
-												<?php if ($params->get('link_titles') == 1) : ?>
+												<?php if ($params->get('link_titles') == 1): ?>
 													<h3>
 														<a class="mod-articles-category-title <?php echo $item->active; ?> link-heading" href="<?php echo $item->link; ?>">
 															<?php echo $item->title; ?>
 														</a>
 													</h3>
-												<?php else : ?>
+												<?php else: ?>
 													<h3>
 														<?php echo $item->title; ?>
 													</h3>
 												<?php endif; ?>
 											</div>
 
-					            <?php if($teamPosition) :?>
+					            <?php if ($teamPosition): ?>
 					            <div class="t-position">
-					              (<?php echo $teamPosition ;?>)
+					              (<?php echo $teamPosition; ?>)
 					            </div>
 					            <?php endif; ?>
 					          </div>
@@ -115,41 +131,53 @@ use Joomla\CMS\Language\Text;
         
 									
 
-									<?php if ($params->get('show_introtext')) : ?>
+									<?php if ($params->get('show_introtext')): ?>
 										<div class="articles-introtext">
 											<?php echo $item->displayIntrotext; ?>
 										</div>
 									<?php endif; ?>
 
 
-									<?php if ($params->get('show_tags', 0) && $item->tags->itemTags) : ?>
+									<?php if ($params->get('show_tags', 0) && $item->tags->itemTags): ?>
 										<div class="mod-articles-category-tags mt-3">
-											<?php echo JLayoutHelper::render('joomla.content.tags', $item->tags->itemTags); ?>
+											<?php echo JLayoutHelper::render(
+               'joomla.content.tags',
+               $item->tags->itemTags
+           ); ?>
 										</div>
 									<?php endif; ?>
 
 
 								</div>
 							</div>
-																<?php if ($params->get('show_readmore')) : ?>
+																<?php if ($params->get('show_readmore')): ?>
 										<p class="articles-readmore">
 											<a class="articles-title <?php echo $item->active; ?>" href="<?php echo $item->link; ?>">
-												<?php if ($item->params->get('access-view') == false) : ?>
+												<?php if ($item->params->get('access-view') == false): ?>
 													<?php echo Text::_('MOD_ARTICLES_CATEGORY_REGISTER_TO_READ_MORE'); ?>
-												<?php elseif ($readmore = $item->alternative_readmore) : ?>
+												<?php elseif ($readmore = $item->alternative_readmore): ?>
 													<?php echo $readmore; ?>
-													<?php echo JHtml::_('string.truncate', $item->title, $params->get('readmore_limit')); ?>
-												<?php elseif ($params->get('show_readmore_title', 0) == 0) : ?>
-													<span><?php echo Text::_('Register Now'); ?></span>
-												<?php else : ?>
+													<?php echo JHtml::_(
+                 'string.truncate',
+                 $item->title,
+                 $params->get('readmore_limit')
+             ); ?>
+												<?php elseif ($params->get('show_readmore_title', 0) == 0): ?>
+													<span><?php echo Text::_('See profile'); ?></span>
+												<?php else: ?>
 													<?php echo Text::_('MOD_ARTICLES_CATEGORY_READ_MORE'); ?>
-													<?php echo JHtml::_('string.truncate', $item->title, $params->get('readmore_limit')); ?>
+													<?php echo JHtml::_(
+                 'string.truncate',
+                 $item->title,
+                 $params->get('readmore_limit')
+             ); ?>
 												<?php endif; ?>
 											</a>
 										</p>
 									<?php endif; ?>
 						</div>
-				<?php $i++; endforeach; ?>
+				<?php $i++;endforeach;
+    ?>
 			</div>
 		<?php endif; ?>
 	</div>
