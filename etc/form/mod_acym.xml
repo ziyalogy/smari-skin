@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="params">
+		<fieldset name="advanced">
+			<field name="introtext" type="textarea" rows="5" cols="35" default="" label="ACYM_INTRO_TEXT" description="ACYM_INTRO_TEXT_DESC" filter="raw"/>
+    </fieldset>
+  </fields>
+</form>

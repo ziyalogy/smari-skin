@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <title>Features Intro Style 1</title>
+	<sampledata></sampledata>
+	<fields name="features-intro">
+		<fieldset name="basic" label="FEATURES_BASIC_LABEL" description="FEATURES_BASIC_DESC">		
+			<field name="decor-image" type="media" label="FEATURES_IMAGE_DECOR_LABEL" description="FEATURES_IMAGE_DECOR_DESC" />
+		</fieldset>
+	
+		<fieldset name="section-features" label="FEATURES_SECTION_LABEL" description="FEATURES_SECTION_DESC" multiple="1">
+			<field name="ft-img" type="media" default="" label="FEATURES_IMAGE_LABEL" description="FEATURES_IMAGE_DESC" required="1"/>
+			<field name="title" type="text" default="" size="40" label="FEATURES_TITLE_LABEL" description="FEATURES_TITLE_DESC" />
+			<field name="desc" type="textarea" default="" size="40" label="FEATURES_DESCRIPTIONS_LABEL" description="FEATURES_DESCRIPTIONS_DESC"/>
+
+			<field name="link-title" type="text" default="" size="40" label="FEATURES_LINK_TITLE_LABEL" description="FEATURES_LINK_TITLE_DESC"/>
+			<field name="link" type="text" default="" size="40" label="FEATURES_LINK_LABEL" description="FEATURES_LINK_DESC"/>
+		</fieldset>
+		
+  </fields>
+</form>

@@ -1,0 +1,27 @@
+<!-- HEADER BLOCK -->
+<header class="header-block header-default w-100">
+  <div class="container-fluid container-xxl">
+    <div class="header-wrap row d-flex align-items-center collapse-static t4-nav-height">
+      <div class="col-6 col-lg-2 col-xl-3">
+        <jdoc:include type="element" name="logo" data-home="index.php" />
+      </div>
+
+      <div class="t4-navbar col-1 col-lg-8 col-xl-6 d-flex justify-content-center collapse-static">
+        <jdoc:include type="element" name="megamenu" />
+      </div>
+
+      <div class="t4-header-r col-5 col-lg-2 col-xl-3 d-flex align-items-center justify-content-end">
+        <span class="d-none d-lg-flex align-items-center">
+          <jdoc:include type="modules" name="header-r" style="raw" />
+        </span>
+
+        <span class="d-collapse">
+          <jdoc:include type="element" name="megamenu-toggle" />
+        </span>
+
+        <jdoc:include type="element" name="offcanvas-toggle" />
+      </div>
+    </div>
+  </div>
+</header>
+<!-- // HEADER BLOCK -->  

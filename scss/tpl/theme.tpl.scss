@@ -1,0 +1,33 @@
+// Function, variables
+@import "../vars";
+
+// Theme Customize
+@import "../../../../plugins/system/t4/themes/base/scss/theme.tpl";
+
+:root {
+	--border-color: #D9D9D9;
+	--heading-color: #1A1A1A;
+	--section-title-color: #1B265C;
+	--meta-color: #828282;
+  --border-input : #f2f2f2;
+	--tag-background-color: #f7f7f7;
+	--tag-background-hover-color: #e9ecef;
+
+	--heading-h1-line-height: 1.139; 
+	--heading-h2-line-height: 1.22;
+	--heading-h3-line-height: 1.37;
+	--heading-h4-line-height: 1.5;
+	--heading-h5-line-height: 1.83;
+	--heading-h6-line-height: 2;
+}
+
+// Resize on mobile 
+@include media-breakpoint-down(sm) {
+	body {
+		--body-font-size: 15px;
+	}
+
+	.row {
+		--t4-gutter-x: 1.875rem;
+	}
+}

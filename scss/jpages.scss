@@ -1,0 +1,401 @@
+@import "vars";
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --body-font-family: 'Bai Jamjuree', sans-serif;
+  --body-font-size: 1rem;
+  --body-line-height: 1.5;
+  --body-font-weight: 400;
+  --body-text-color: #4f4f4f;
+  --background-color: #f9f9f9;
+  --color-primary: #1B265C;
+  --color-secondary: #FF2850;
+  --heading-color:#1a1a1a;
+}
+
+html,body {
+  height: 100%;
+}
+
+body {  
+  font-family: var(--body-font-family);
+  color: var(--body-text-color);
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight);
+  line-height:  var(--body-line-height);
+  margin: 0;
+  padding: 0;
+}
+
+pre,
+code {
+  color: #e83e8c;
+  font-family: Consolas, monaco, monospace;
+}
+
+.alert {
+  background-color: $gray-200;
+  border: 1px solid rgba($black, 0.1);
+  border-radius: 5px;
+  margin-bottom: $spacer;
+  padding: $spacer/2;
+  position: relative;
+
+  .close {
+    border: 1px solid rgba($black, 0.1%);
+    border-radius: 3px;
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    position: absolute;
+    right: $spacer/2;
+    top: $spacer/2;
+    text-align: center;
+    width: 20px;
+
+    &:hover, &:focus, &:active {
+      cursor: pointer;
+    }
+  }
+
+  h4 {
+    margin: 0;
+  }
+
+  &.alert-warning {
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+    color: #856404;
+  }
+
+  &.alert-message {
+    background-color: #cce5ff;
+    border-color: #b8daff;
+    color: #004085;
+  }
+}
+
+// 
+// T4 ERROR PAGE
+// ------------------------
+.t4-error-page {
+  background-color: $white;
+
+  h1 {
+    margin: 0 0 $spacer;
+    font-size: 1.333rem;
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.733rem;
+    }
+  }
+
+  .t4-error-msg {
+    background-color: $white;
+    box-shadow: 0 3px 3px rgba(0,0,0, 0.075);
+    border-radius: 7px;
+    padding: $spacer*2;
+    margin: 0 $spacer;
+    min-height: 180px;
+    margin-top: calc(100vh / 2);
+    max-width: 576px;
+    position: relative;
+    text-align: center;
+    transform: translateY(-50%);
+
+    @media screen and (min-width: 768px) {
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: $spacer*8;
+      text-align: left;
+    }
+  }
+
+  img {
+    opacity: .1;
+    margin: 0 auto;
+    width: $spacer*5;
+
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      left: $spacer*2;
+      top: $spacer*2.5;
+      margin: 0;
+    }
+  }
+
+  .error-message {
+    margin-top: 0;
+    margin-bottom: $spacer*2;
+  }
+
+  code {
+    background-color: #FEF3F8;
+    border-radius: 3px;
+    color: #e83e8c;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9333rem;
+    padding: 0 5px;
+  }
+
+  .cta-wrap {    
+    h3 {
+      color: $gray-600;
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 1px;
+      margin: 0 0 $spacer/2 0;
+      text-transform: uppercase;
+
+      @media screen and (min-width: 768px) {
+        display: inline-block;
+        margin: 0 $spacer/2 0 0;
+      }
+    }
+
+    a {
+      background: $gray-200;
+      border-radius: 25px;
+      color: $gray-700;
+      display: inline-block;
+      font-size: 0.8rem;
+      margin: 5px $spacer/4;
+      letter-spacing: 1px;
+      padding: $spacer/3 $spacer;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.25s ease-in;
+
+      &:hover, &:focus, &:active {
+        background-color: $blue;
+        color: $white;
+      }
+    }
+  }
+}
+
+
+// OFFLINE PAGE
+// -------------------------------
+
+.offline {
+
+  // Outside content
+  .outline {
+  }
+
+  // Content
+  .form-wrap {
+    min-height: 600px;
+  }
+
+  // Content Left
+  .content-left {
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 $grid-gutter-width * 7.5;
+
+    @include media-breakpoint-down(hd) {
+      padding: $grid-gutter-width * 3.75;
+    }
+    
+    @include media-breakpoint-down(xl) {
+      padding: $grid-gutter-width * 1.875;
+    }
+
+    @include media-breakpoint-down(lg) {
+      padding: $grid-gutter-width * 3.75;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: $grid-gutter-width;
+    }
+
+    // Site Name
+    h2 {
+      font-size: 3rem;
+      margin: 0 0 $spacer;
+      text-transform: uppercase;
+    }
+
+
+
+    // Ofline Message 
+    .offline-message {
+      font-size: 1.25rem;
+      line-height: 1.5;
+      font-weight: 500;
+      color: var(--heading-color);
+    }
+
+    // Form
+    #form-login {
+
+      // Field Username , Field Pass
+      #form-login-username, #form-login-password {
+        margin: 0;
+      }
+
+      // Label
+      label {
+        display: block;
+        margin-bottom: $spacer/6;
+      }
+
+      // Tranparent Input Chorme
+      input:-webkit-autofill,
+      input:-webkit-autofill:hover,
+      input:-webkit-autofill:focus,
+      input:-webkit-autofill:active {
+          transition: background-color 5000000s ease-in-out 0s;
+      }
+
+      // Input
+      input {
+        border: $border-width solid var(--border-input);
+        font-size: $input-btn-font-size;
+        font-family: $input-btn-font-family;
+        line-height: $input-btn-line-height;
+        padding: $input-btn-padding-y $input-btn-padding-x;
+        position: relative;
+        width: 100%;
+        &:focus { 
+          outline: none;
+          border: $border-width solid var(--color-primary);
+        }
+      }
+
+      //Button Submit
+      #submit-button {
+        margin-top: $spacer;
+        input[type="submit"] {
+          background-color: var(--color-secondary);
+          border: $border-width solid var(--color-secondary);
+          color: white;
+          font-weight: 500;
+          width: 50%;
+
+          &:hover {
+            opacity: 0.85;
+          }
+
+        }
+      }
+    }
+  }
+
+  // Content Right
+  .content-right {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+  }
+
+}
+
+// ERROR PAGE
+// -------------------------------
+.error-page {
+
+  .error-page-wrap {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 850px;
+    margin: auto;
+    max-width: 100%;
+    min-height: 800px;
+    text-align: center;
+    padding: 0 $grid-gutter-width;
+
+    // Error Image
+    .error-image img{
+      max-width: 500px;
+
+      // Mobile View
+      @include media-breakpoint-down(sm) {
+        max-width: 320px;
+      }
+    } 
+
+    // Error Message
+    .error-msg {
+
+      h2 {
+        color: var(--heading-color);
+        font-size: 3rem;
+        margin: 0 0 $spacer/3;
+        line-height: 1.3;
+
+        // Mobile View
+        @include media-breakpoint-down(sm) {
+          font-size: 1.5rem;
+        }
+      }
+
+      p.alert-error {
+        font-size: var(--body-font-size);
+        margin: 0 0 $spacer/3;
+        line-height: var(--body-line-height);
+      }
+    }
+
+    // Error Code 
+    .error-code {
+      color: var(--heading-color);
+      font-size: 20rem;
+      font-weight: 700;
+      line-height: 1.1;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 11rem;
+      }
+    }
+
+    //Alert
+    .alert-error {
+      word-break: break-all;
+      white-space: normal;
+      border-radius: $border-radius;
+      border: $border-width solid $border-color;
+      code {
+        font-family: inherit;
+      }
+    }
+
+    // Paragraph
+    p {
+      margin: 0;
+      strong {
+        font-weight: 400;
+      }
+    }
+
+    // Page Redirect
+    .page-redirect a {
+      background-color: var(--color-secondary);
+      border: 2px solid var(--color-secondary);
+      color: $white;
+      display: inline-block;
+      font-weight: 600;
+      margin-top: $spacer;
+      text-decoration: none;
+      padding: $btn-padding-y $btn-padding-x;
+
+      &:hover, &:focus {
+        opacity: 0.85;
+      }
+    }
+  }
+} 

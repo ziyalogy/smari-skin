@@ -1,0 +1,121 @@
+//
+// OFF-CANVAS CONTENT STYLES
+// -------------------------------------
+// Extend style in base
+// --------------------
+@import "../../../plugins/system/t4/themes/base/scss/_offcanvas";
+
+// Offcanvas toggle
+// -----------------------------------
+.t4-offcanvas-toggle {
+  border: 0;
+  color: var(--mainnav-link-color);
+  display: block;
+  line-height: 1;
+  padding: 0;
+  transition: all 0.35s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    color: var(--mainnav-link-hover-color);
+  }
+
+  > span {
+    vertical-align: middle;
+  }
+
+  i {
+    font-size: 22px;
+  }
+}
+
+
+.t4-offcanvas {
+
+  // Off Canvas Header
+  // -----------------------------------
+  .t4-off-canvas-header {    
+  }
+
+  // Off Canvas Body
+  // -----------------------------------  
+  .t4-off-canvas-body {
+
+    // Title 
+    .module-title {
+      display: none;
+    }
+
+    .module-inner {
+      padding: 0 !important;
+    }
+
+    // Navbar
+    .navbar {
+
+      // Button 
+      .btn-toggle {
+      border-radius: $border-radius;
+      background-color: $gray-200;
+        &::after {
+          color: var(--meta-color);
+        }
+      }
+
+      .nav-item {
+        padding: 0 $grid-gutter-width;
+      }
+
+      // Link
+      .nav-link,
+      .separator {
+        color: var(--heading-color);
+        font-size: var(--body-font-size) ;
+        font-weight: 600;
+        line-height: var(--body-line-height);
+
+        &:hover, &:focus, &:active {
+        }
+      }
+
+      // Drilldown effect
+      // ----------------
+      &.drilldown-effect {
+
+        // Sub Menu
+        .sub-menu-back {
+        border-radius: 0;
+        color: var(--color-primary);
+        padding: 0.75rem $spacer*1.5;
+          i {
+            color: var(--color-primary);
+          }
+        }
+
+        // Item Menu
+        .nav-item {
+          .dropdown-menu .nav-item {
+            border-bottom: $border-width solid $border-color;
+            padding: 0 $grid-gutter-width;
+            a{
+              color: var(--heading-color);
+              font-weight: 500;
+
+              &:hover {
+                color: var(--color-secondary);
+              }
+            }
+
+            &.active > a {
+              color: var(--color-secondary);
+            }
+
+            .btn-toggle { right: auto; }
+          }
+        }
+      }
+    }
+
+  }
+
+}

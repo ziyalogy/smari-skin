@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<title>Cta</title>
+	<sampledata></sampledata>
+	<fields name="parallax">
+	   <fieldset name="basic" label="CTA_BASIC_LABEL" description="CTA_BASIC_DESC" multiple="0">
+   		<field name="cta-desc" type="textarea" default="secondary" label="CTA_DESCRIPTION_LABEL" description="CTA_DESCRIPTION_DESC" />
+
+   		<field name="bg-content" type="list" default="secondary" label="CTA_BACKGROUND_COLOR_LABEL" description="CTA_BACKGROUND_COLOR_DESC" >
+				<option value="primary">Primary</option>
+				<option value="secondary">Secondary</option>
+				<option value="info">Info</option>
+				<option value="danger">Danger</option>
+			</field>
+	  </fieldset>
+
+	  <fieldset name="cta-list" label="CTA_SECTION_LABEL" description="CTA_SECTION_DESC" multiple="1">
+			<field name="icon" type="text" default="" label="CTA_ICON_LABEL" description="CTA_ICON_DESC" required="1"/>
+			<field name="title" type="text" default="" size="40" label="CTA_TITLE_LABEL" description="CTA_TITLE_DESC" />
+			<field name="link-title" type="text" default="" size="40" label="CTA_LINK_TITLE_LABEL" description="CTA_LINK_TITLE_DESC"/>
+			<field name="link" type="text" default="" size="40" label="CTA_LINK_LABEL" description="FEATURES_LINK_DESC"/>
+		</fieldset>
+  </fields>
+</form>
+
+
+

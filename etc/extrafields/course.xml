@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+	<fields name="attribs" addfieldpath="/templates/smari/etc/fields">
+		<fieldset
+      name="extra-fields"
+      label="TPL_GROUP_EXTRA_FIELDS_LABEL"
+      description=""
+      group="extrafields"
+    >
+			<field
+        name="type-article"
+        type="hidden"
+        default="view-team"
+        label="TPL_LISTING_INFO_LABEL"
+      />
+
+			<field
+        name="spacer"
+        type="spacer"
+        label="TPL_LISTING_INFO"
+        class="text-label"
+      />
+
+			<field
+        name="number"
+        type="text"
+        label="TPL_NUMBER"
+        description="TPL_NUMBER_DESC"
+        size="40"
+        filter="RAW"
+      />
+
+			<field
+        name="team_position"
+        type="text"
+        label="TPL_POSITION"
+        description="TPL_POSITION_DESC"
+        size="40"
+        filter="RAW"
+      />
+
+			<field
+        name="team_date"
+        type="text"
+        label="TPL_BIRTHDAY"
+        description="TPL_BIRTHDAY_DESC"
+        size="40"
+        filter="RAW"
+      />
+
+			<field
+        name="team_nationality"
+        type="text"
+        label="TPL_NATIONALITY"
+        description="TPL_NATIONALITY_DESC"
+        size="40"
+        filter="RAW"
+      />
+
+			<field
+        name="team_height"
+        type="text"
+        label="TPL_HEIGHT"
+        description="TPL_HEIGHT_DESC"
+        size="40"
+        filter="RAW"
+      />
+
+			<field
+        name="team_weight"
+        type="text"
+        label="TPL_WEIGHT"
+        description="TPL_WEIGHT_DESC"
+        size="40"
+        filter="RAW"
+      />
+
+			<field
+        name="team_shot"
+        type="text"
+        label="TPL_SHOT"
+        description="TPL_SHOT_DESC"
+        size="40"
+        filter="RAW"
+      />
+
+			<field
+        name="duration"
+        type="text"
+        label="Duration"
+        description="Add duration"
+        size="40"
+        filter="RAW"
+      />
+			
+			<field
+        name="award"
+        type="text"
+        label="Award"
+        description="Add award"
+        size="40"
+        filter="RAW"
+      />
+		</fieldset>
+	</fields>
+</form>

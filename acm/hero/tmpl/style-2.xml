@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <title>Hero Style 2</title>
+	<sampledata></sampledata>
+	<fields name="hero-intro">
+		<fieldset name="basic" label="HERO_BASIC_LABEL" description="HERO_BASIC_DESC">
+			<field name="ft-align" type="list" default="left" label="HERO_ALIGN_LABEL" description="HERO_ALIGN_DESC">
+				<option value="left">Left</option>
+				<option value="center">Center</option>
+			</field>
+
+			<field name="ft-bg" type="media" default="" label="HERO_BACKGROUND_LABEL" description="HERO_BACKGROUND_DESC" />
+			
+			<field name="tagline" type="text" default="" label="Tagline" description="Add tagline"  />
+			<field name="award" type="text" default="" label="Award" description="Add award"  />
+			<field name="duration" type="text" default="" label="Duration" description="Add duration"   />
+
+			<field name="title" type="textarea" default="" label="HERO_TITLE_LABEL" description="HERO_TITLE_DESC"   />
+
+			<field name="btn-title" type="text" default="" label="HERO_BUTTON_TITLE_LABEL" description="HERO_BUTTON_TITLE_DESC" />
+			<field name="btn-link" type="text" default="" label="HERO_BUTTON_LINK_LABEL" description="HERO_BUTTON_LINK_DESC" />
+		</fieldset>
+  </fields>
+</form>

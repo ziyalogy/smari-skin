@@ -1,0 +1,131 @@
+// ------------------------------------
+// FORMS
+// ------------------------------------
+
+// Extend style in base
+// --------------------
+@import "../../../plugins/system/t4/themes/base/scss/_forms";
+
+// 
+// Button
+// -----------------------------------
+.btn {
+  border-radius: $border-radius;
+}
+
+@each $color, $value in $theme-colors-t4 {
+  .btn.btn-outline-#{$color} {
+  	position: relative;
+  	overflow: hidden;
+  	z-index: 1;
+  	transition: none;
+
+  	// Effect
+    &:before {
+      display: block;
+      content: '';
+      position: absolute;
+      z-index: -1;
+      transition: all 0.4s;
+      transform: translateX(-50%) translateY(-50%) rotate(45deg);
+      width: 100%;
+      height: 0;
+      top: 50%;
+      left: 50%;
+      background: $value;
+      opacity: 0;
+    }
+
+    &:hover,&:focus,&:active {
+    	background: transparent!important;
+      color: $white !important;
+
+    	&:before {
+    		height: 800%;
+    		opacity: 1;
+    	}
+    }
+  }
+}
+
+.btn {
+  &.btn-outline-light,
+  &.btn-outline-white {
+    &:hover,&:focus,&:active {
+      color: $gray-900!important;
+    }
+  }
+}
+
+// 
+// Textual form controls
+// -----------------------------------
+
+// Control Group
+form:not(.form-no-margin) .control-group {
+  margin-bottom: $spacer;
+}
+
+// Tranparent Input Chorme
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000000s ease-in-out 0s;
+}
+
+input.form-check-input {
+  padding: 0;
+}
+
+// Input
+input, input.form-control {
+  width: 100%;
+  font-size: $input-btn-font-size;
+  line-height: $input-btn-line-height;
+  font-family: $input-btn-font-family;
+  padding: $input-btn-padding-y $input-padding-x;
+  border: $border-width solid var(--border-input) ;
+  position: relative;
+  display: block;
+
+  &:focus { 
+    outline: none;
+    box-shadow: none;
+    border: 1px solid var(--color-primary);
+  }
+
+}
+
+input[type="password"] {
+  letter-spacing: 0.1rem;
+}
+
+// Label
+.control-label {
+ 
+  .form-control-feedback {
+  }
+
+  label {
+    font-weight: 400;
+    margin-bottom: $spacer-sm;
+  }
+}
+
+// 
+// Input group
+// ---------------------------
+.input-group-addon {
+  > span {
+  }
+}
+
+
+// 
+// Btn Toolbar
+// --------------------------
+.btn-toolbar {
+  .btn-group + .btn-group {
+  }
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <title>Live Matches Style 2</title>
+	<sampledata></sampledata>
+	<fields name="livematches-intro">
+		<fieldset name="section-features" label="LIVEMATCHES_SECTION_LABEL" description="LIVEMATCHES_SECTION_DESC" >
+			<field name="lm-bg" type="media" default="" label="LIVEMATCHES_BACKGROUND_LABEL" description="LIVEMATCHES_BACKGROUND_DESC" />
+			<field name="lm-logo" type="media" default="" label="LIVEMATCHES_LOGO_LABEL" description="LIVEMATCHES_LOGO_DESC" required="1"/>
+			<field name="lm-info" type="text" default="" size="40" label="LIVEMATCHES_INFO_LABEL" description="LIVEMATCHES_INFO_DESC" />
+			<field name="lm-desc" type="textarea" default="" size="40" label="LIVEMATCHES_DESC_LABEL" description="LIVEMATCHES_DESC_DESC" />
+
+			<field name="club1-name" type="text" default="" size="40" label="LIVEMATCHES_CLUB_NAME_LABEL" description="LIVEMATCHES_CLUB_NAME_DESC" required="1"/>
+			<field name="club1-logo" type="media" default="" label="LIVEMATCHES_CLUB_LOGO_LABEL" description="LIVEMATCHES_CLUB_LOGO_DESC" required="1"/>
+			<field name="club1-score" type="text" default="" size="40" label="LIVEMATCHES_CLUB_SCORE_LABEL" description="LIVEMATCHES_CLUB_SCORE_DESC" />
+
+			<field name="club2-name" type="text" default="" size="40" label="LIVEMATCHES_CLUB_NAME_LABEL" description="LIVEMATCHES_CLUB1_NAME_DESC" required="1"/>
+			<field name="club2-logo" type="media" default="" label="LIVEMATCHES_CLUB_LOGO_LABEL" description="LIVEMATCHES_CLUB1_LOGO_DESC" required="1"/>
+			<field name="club2-score" type="text" default="" size="40" label="LIVEMATCHES_CLUB_SCORE_LABEL" description="LIVEMATCHES_CLUB_SCORE_DESC" />
+
+			<field name="link-title" type="text" default="" size="40" label="LIVEMATCHES_LINK_TITLE_LABEL" description="LIVEMATCHES_LINK_TITLE_DESC"/>
+			<field name="link" type="text" default="" size="40" label="LIVEMATCHES_LINK_LABEL" description="LIVEMATCHES_LINK_DESC"/>
+
+			<field name="time" type="calendar" showtime="true" timeformat="24" format="%Y-%m-%d %H:%M:%S" default="" size="40" label="LIVEMATCHES_TIME_LABEL" description="LIVEMATCHES_TIME_DESC"/>
+		</fieldset>
+		
+  </fields>
+</form>

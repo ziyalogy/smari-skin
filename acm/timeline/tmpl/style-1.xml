@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <title>Timeline Style 1</title>
+	<sampledata><![CDATA[ 
+		{":type":"uber:timeline","timeline":""}}
+    ]]></sampledata>
+	<fields name="timeline">
+		<fieldset name="timeline-box" label="TIMELINE_BOX_LABEL" description="TIMELINE_BOX_DESC">
+			<field name="data" type="jalist">
+				<item name="timeline-image" type="media" default="" label="TIMELINE_IMAGE_LABEL" description="TIMELINE_IMAGE_DESC" />
+				<item name="timeline-date" type="text" default="" label="TIMELINE_DATE_LABEL" description="TIMELINE_DATE_DESC" />
+				<item name="description" type="textarea" cols="40" rows="5" default="" label="TIMELINE_DESC_LABEL" description="TIMELINE_DESC" />
+			</field>
+		</fieldset>
+	</fields>
+</form>
