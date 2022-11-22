@@ -13,9 +13,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
     -moz-osx-font-smoothing: grayscale;
 }
 #t4-mainnav, #t4-header {
-    background-color: #2c2c2c !important;
+    background-color: #303030 !important;
     display: flex;
     min-height: 80px;
+    z-index: 2000;
 }
 #t4-footnav {
     background-image: url(/images/design/smari-footer.png);
@@ -66,7 +67,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
     color: var(--mainnav-link-color);
 }
 .t4-footnav .footsub {
-    display: none;
+    display: ;
 }
 .t4-module {
     padding: 0;
@@ -81,7 +82,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
     margin-bottom: 0.5rem;
 }
 .t4-footnav {
-    padding-top: 3rem;
+    padding-top: inherit;
     }
 .t4-footnav .copyright-wrap {
     border-top: none;
@@ -95,7 +96,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
     background-attachment: scroll;
 }
 .t4-section-4 {
-    background-image: url(/images/design/smari-green.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -290,7 +290,7 @@ a:hover {
     padding: 9px;
     display: inline-block;
 }
-.convertforms .cf-col-medium-10 h1, h2 {
+.convertforms .cf-col-medium-10 h1, h2, h3 {
     color: #fff !important;
 }
 .cf-content-text
@@ -318,3 +318,72 @@ a:hover {
 .category-module a {
     color: var(--color-light);
 }
+.btn, #acym_wrapper .acym__front__archive #acym__front__archive__search button, div.acym_module_form input.btn, .blog-list .item-readmore a {
+    font-family: inherit;
+    font-weight: INHERIT;
+    color: #FFF !important;
+    }
+.convertforms .cf-input {
+    font-size: 1.4em;
+    font-weight: 600;
+}
+.t4-header-r .form-search .form-control:focus {
+background-color: rgb(255,251,243,0.1);
+border: none;
+color: var(--color-light);
+outline: none;
+}
+.short-info-player .t-position {
+    color: var(--color-light);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.t4-wrapper {
+    background: var(--body-bg-color);
+    box-shadow: 0 0 15px rgb(0 0 0 / 10%);
+    margin: auto;
+    max-width: inherit;
+}
+.not-at-top #t4-header.t4-sticky {
+    background-color: #fff;
+    box-shadow: 0 3px 5px rgb(0 0 0 / 8%);
+    margin-top: -2px;
+}
+.footer-inner .acm-social .social-inner {
+    border-left: none;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-right: inherit;
+    padding-left: inherit;
+}
+.footer-inner .social-follow-wrap .fa {
+    color: #303030;
+    width: 3rem;
+    line-height: 2rem !important;
+    text-align: center;
+    padding-left: 1rem;
+    padding: 0.5rem;
+    font: normal normal normal 2rem/1 FontAwesome;
+    font-size: 1.5rem;
+    }
+.category-module li {
+    list-style: none;
+    font-size: initial;
+    padding: 0;
+    margin: 0;
+}
+.category-module li a:before {
+    display: none;
+}
+.category-module li a {
+    display: block;
+    padding: 0.25rem;
+    padding-left: inherit;
+    position: relative;
+}
+input, input.form-control, #acym_wrapper .acym__front__archive #acym__front__archive__search input, div.acym_module_form input[type=email], div.acym_module_form input[type=text] {
+    font-family: inherit;}
+.convertforms .cf-response {
+    padding: 2rem;}
