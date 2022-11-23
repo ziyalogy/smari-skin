@@ -391,3 +391,7 @@ input, input.form-control, #acym_wrapper .acym__front__archive #acym__front__arc
     text-transform: inherit;
     font-weight: inherit;
 }
+.acm-features.coaches-highlight .info-wrap .list-item .item {
+    padding: 1.714rem 3.428rem;
+    border: none !important;
+}
