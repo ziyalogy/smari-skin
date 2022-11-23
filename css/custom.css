@@ -387,3 +387,7 @@ input, input.form-control, #acym_wrapper .acym__front__archive #acym__front__arc
     font-family: inherit;}
 .convertforms .cf-response {
     padding: 2rem;}
+.mod-player-1 .title h3, .mod-player-1 .title .h3 {
+    text-transform: inherit;
+    font-weight: inherit;
+}

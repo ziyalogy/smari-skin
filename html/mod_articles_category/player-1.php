@@ -127,11 +127,14 @@ use Joomla\CMS\Language\Text;
 											<?php echo JLayoutHelper::render('joomla.content.tags', $item->tags->itemTags); ?>
 										</div>
 									<?php endif; ?>
-
+																
 
 								</div>
+								
+
+								
 							</div>
-																<?php if ($params->get('show_readmore')) : ?>
+						<?php if ($params->get('show_readmore')) : ?>
 										<p class="articles-readmore">
 											<a class="articles-title <?php echo $item->active; ?>" href="<?php echo $item->link; ?>">
 												<?php if ($item->params->get('access-view') == false) : ?>

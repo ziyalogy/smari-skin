@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <title>Features Intro Coach Highlight</title>
+	<sampledata></sampledata>
+	<fields name="features-intro">
+		<fieldset name="basic" label="FEATURES_BASIC_LABEL" description="FEATURES_BASIC_DESC">
+			<field name="intro-img" type="media" default="" label="FEATURES_INTRO_MEDIA_LABEL" description="FEATURES_INTRO_MEDIA_DESC" />
+			<field name="columns" type="list" label="FEATURES_COLUMNS_LABEL" description="FEATURES_COLUMNS_DESC" >
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+			</field>
+			<field name="bg-ratio" type="list" default="primary" label="FEATURES_INTRO_MEDIA_RADIO_LABEL" description="FEATURES_INTRO_MEDIA_RADIO_DESC" >
+				<option value="1">Radio 1:1</option>
+				<option value="2">Radio 2:3</option>
+			</field>
+
+			<field name="bg-content" type="list" default="primary" label="FEATURES_BACKGROUND_CONTENT_LABEL" description="FEATURES_BACKGROUND_CONTENT_DESC" >
+				<option value="white">White</option>
+				<option value="primary">Primary</option>
+				<option value="secondary">Secondary</option>
+				<option value="success">Success</option>
+				<option value="info">Info</option>
+				<option value="purple">Purple</option>
+				<option value="dark">Dark</option>
+				<option value="black">Black</option>
+			</field>
+
+			<field name="align-media" type="list" default="left" label="FEATURES_ALIGN_MEDIA_LABEL" description="FEATURES_ALIGN_MEDIA_DESC" >
+				<option value="left">Left</option>
+				<option value="right">Right</option>
+			</field>
+			<field name="info-desc" type="textarea" default="" label="FEATURES_INFO_DESC_LABEL" description="FEATURES_INFO_DESC_DESC" />
+
+			<field name="button" type="text" default="" label="FEATURES_BUTTON" description="FEATURES_BUTTON_DES"/>
+			<field name="btn-link" type="text" default="" label="FEATURES_BUTTON_LINK" description="FEATURES_BUTTON_LINK_DES"/>
+			<field name="btn-type" type="list" default="" label="FEATURES_BUTTON_TYPE" description="FEATURES_BUTTON_TYPE_DES">
+				<option value="primary">Primary</option>
+				<option value="secondary">Secondary</option>
+				<option value="success">Success</option>
+				<option value="light">Light</option>
+				<option value="outline-light">Outline Light</option>
+				<option value="dark">Dark</option>
+				<option value="outline-dark">Outline Dark</option>
+				<option value="black">Black</option>
+			</field>
+		</fieldset>
+
+		<fieldset name="section-features" label="FEATURES_SECTION_LABEL" description="FEATURES_SECTION_LABEL_DESC">
+			<field name="data" type="jalist" >
+				<item name="number" type="text" default="" label="FEATURES_NUMBER_LABEL" description="FEATURES_NUMBER_DESC" />
+				<item name="title" type="text" default="" label="FEATURES_TITLE_LABEL" description="FEATURES_TITLE_DESC" />
+				<item name="desc-info" type="textarea" default="" label="FEATURES_DESC_INFO_LABEL" description="FEATURES_DESC_INFO_DESC" />
+			</field>
+		</fieldset>
+  </fields>
+</form>
