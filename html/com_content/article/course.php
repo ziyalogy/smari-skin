@@ -53,7 +53,7 @@ $teamShot = $extrafields->get('team_shot');
 	<div class="top-info">
 		<div class="container">
 			<div class="row">
-				<div class="col-12 col-lg-6 order-2 order-lg-1">
+				<div class="col-12 col-lg-8 order-2 order-lg-1">
 					<div class="info-left">
 						<meta itemprop="inLanguage" content="<?php echo ($this->item->language === '*') ? Factory::getApplication()->get('language') : $this->item->language; ?>">
 
@@ -138,21 +138,21 @@ $teamShot = $extrafields->get('team_shot');
 
 						</div>
 
-						<div class="statics-wrap">
-							<h3><?php echo Jtext::_('Course info') ;?></h3>
+						<div class="statics-wrap course-info-wrap">
+							<h3 class="text-secondary"><?php echo Jtext::_('Course info') ;?></h3>
 
 							<ul>
 								<?php if($courseDuration) :?>
 									<li>
-										<span><?php echo Jtext::_('Duration') ;?></span>
-										<h3><?php echo $courseDuration ;?></h3>
+										<span class="text-dark"><?php echo Jtext::_('Duration') ;?></span>
+										<h3 class="text-black"><?php echo $courseDuration ;?></h3>
 									</li>
 								<?php endif ;?>
 
 								<?php if($courseAward) :?>
 									<li>
-										<span><?php echo Jtext::_('Award') ;?></span>
-										<h3><?php echo $courseAward ;?></h3>
+										<span class="text-dark"><?php echo Jtext::_('Award') ;?></span>
+										<h3 class="text-black"><?php echo $courseAward ;?></h3>
 									</li>
 								<?php endif ;?>
 
@@ -191,13 +191,17 @@ $teamShot = $extrafields->get('team_shot');
 									</li>
 								<?php endif ;?>
 							</ul>
+							<a href="/register" class="btn btn-danger mt-3">Register Now</a>
 
 						</div>
-													<br/><br/><a href="/register" class="btn btn-danger">Register Now</a>
+						
+						<div itemprop="articleBody" class="article-body  p-2">
+			<div class="coach-bio"><?php echo $this->item->text; ?></div>
+		</div>
 					</div>
 				</div>
 
-				<div class="col-12 col-lg-6 order-1 order-lg-2">
+				<div class="col-12 col-lg-4 order-1 order-lg-2">
 					<?php if ($params->get('access-view')) : ?>
 						<?php echo LayoutHelper::render('joomla.content.full_image', $this->item); ?>
 
@@ -206,6 +210,7 @@ $teamShot = $extrafields->get('team_shot');
 						endif; ?>
 
 					<?php if (isset ($this->item->toc)) : echo $this->item->toc; endif; ?>
+					
 				</div>
 			</div>
 		</div>

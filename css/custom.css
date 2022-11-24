@@ -483,3 +483,21 @@ input, input.form-control, #acym_wrapper .acym__front__archive #acym__front__arc
     font-size: var(--h2-font-size);
     color: var(--color-primary)!important;
 }
+.course-info-wrap{
+    margin-bottom: 2rem;
+    background-color: #F2F2F2;
+    padding: 2rem;
+}
+.detail-team-wrap .top-info .item-image:before {
+    background: var(--color-secondary);
+    content: "";
+    position: absolute;
+    top: -9rem;
+    left: 50%;
+}
+.detail-team-wrap {
+        background-image: url(/images/design/bg-gradient-3.svg) !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}

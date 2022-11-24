@@ -101,6 +101,14 @@
         size="40"
         filter="RAW"
       />
+      			<field
+        name="requr"
+        type="text"
+        label="Award"
+        description="Add award"
+        size="40"
+        filter="RAW"
+      />
 		</fieldset>
 	</fields>
 </form>
