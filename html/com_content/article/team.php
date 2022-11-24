@@ -53,13 +53,13 @@ $teamShot = $extrafields->get('team_shot');
 	<div class="top-info">
 		<div class="container">
 			<div class="row">
-				<div class="col-12 col-lg-6 order-2 order-lg-1">
+				<div class="col-12 col-lg-8 order-2 order-lg-1">
 					<div class="info-left">
 						<meta itemprop="inLanguage" content="<?php echo ($this->item->language === '*') ? Factory::getApplication()->get('language') : $this->item->language; ?>">
 
 						<?php if ($this->params->get('show_page_heading')) : ?>
-						<div class="page-header">
-							<h1> <?php echo $this->escape($this->params->get('page_heading')); ?> </h1>
+						<div class="page-header ">
+							<h1 class="text-primary"> <?php echo $this->escape($this->params->get('page_heading')); ?> </h1>
 						</div>
 						<?php endif; ?>
 
@@ -84,11 +84,11 @@ $teamShot = $extrafields->get('team_shot');
 		          </div>
 		          <?php endif; ?>
 
-	          	<div class="t-name">
+	          	<div class="t-name p-2">
 								<?php if ($params->get('show_title') || $params->get('show_author')) : ?>
 									<div class="page-header">
 										<?php if ($params->get('show_title')) : ?>
-											<h2 itemprop="headline">
+											<h2 itemprop="headline text-primary">
 												<?php echo $this->escape($this->item->title); ?>
 											</h2>
 										<?php endif; ?>
@@ -111,7 +111,7 @@ $teamShot = $extrafields->get('team_shot');
 								<?php endif; ?>
 
 								<?php if($teamPosition) :?>
-			            <div class="t-position">
+			            <div class="t-position text-secondary">
 			              <?php echo $teamPosition ;?>
 			            </div>
 		            <?php endif; ?>
@@ -138,8 +138,8 @@ $teamShot = $extrafields->get('team_shot');
 
 						</div>
 
-						<div class="statics-wrap">
-							<h3><?php echo Jtext::_('Bio') ;?></h3>
+						<div class="statics-wrap p-2">
+							<h3 class="text-secondary"><?php echo Jtext::_('Bio') ;?></h3>
 
 							<ul>
 								<?php if($courseDuration) :?>
@@ -192,10 +192,13 @@ $teamShot = $extrafields->get('team_shot');
 								<?php endif ;?>
 							</ul>
 						</div>
+								<div itemprop="articleBody" class="article-body  p-2">
+			<div class="coach-bio"><?php echo $this->item->text; ?></div>
+		</div>
                     
 					</div>
 				</div>
-				<div class="col-12 col-lg-6 order-1 order-lg-2">
+				<div class="col-12 col-lg-4 order-1 order-lg-2 p-2">
 					<?php if ($params->get('access-view')) : ?>
 						<?php echo LayoutHelper::render('joomla.content.full_image', $this->item); ?>
 

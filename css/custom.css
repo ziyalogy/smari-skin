@@ -272,6 +272,7 @@ a:hover {
 .detail-team-wrap .top-info .item-image img {
     position: relative;
     -webkit-border-radius: 50px;
+    margin-bottom: 3rem;
     -moz-border-radius: 50px;
     border-radius: 50px;
     z-index: 2;
@@ -435,4 +436,50 @@ input, input.form-control, #acym_wrapper .acym__front__archive #acym__front__arc
 }
 .acm-slideshow .background {
     opacity: 0.8;
+}
+.smari-slideshow .owl-carousel.owl-drag .owl-item {
+    display: flex;
+}
+.acm-slideshow .background {
+    background-size: cover;
+    position: absolute;}
+.acm-slideshow .mask {
+    background: linear-gradient(180deg,rgba(0,0,0,0) 25.78%,rgba(0,0,0,.6) 78.96%),linear-gradient(0deg,rgba(0,0,0,.2),rgba(0,0,0,.2));
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.acm-slideshow .item {
+    background: var(--gray-900);
+    -ms-flex-line-pack: center;
+    align-content: flex-start;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: left;
+    height: 720px;
+    max-height: 92vh;
+}
+.coach-bio{
+    color: var(--color-gray)!important;
+    font-size: larger;
+}
+.detail-team-wrap .top-info {
+    background: var(--color-light);
+    padding-top: 6.75rem;
+    padding-bottom: 0rem;
+    overflow: hidden;
+}
+.short-info-player .page-header h2, .short-info-player .page-header .h2 {
+    font-size: var(--h2-font-size);
+    color: var(--color-primary)!important;
 }

@@ -13,7 +13,8 @@ defined('_JEXEC') or die;
   $count = $helper->getRows('data.title');
 ?>
 
-<div class="acm-slideshow acm-owl ">
+<div class="acm-slideshow acm-owl  ">
+ 
 	<div id="acm-slideshow-<?php echo $module->id; ?>">
 		<div class="owl-carousel owl-theme">
 				<?php 
@@ -25,12 +26,16 @@ defined('_JEXEC') or die;
             $bgSlide = 'style="background-image: url('.$helper->get('data.image', $i).');"';
           };
         ?>
-				<div class="item hero-item">
-          <div class="background" <?php echo $bgSlide ;?>></div>          
-          <div class="slider-content container">
+				          <div class="container">
+        <div class="item hero-item">
+          <div class="background" <?php echo $bgSlide ;?>></div> <div class="mask"></div>          
+          <div class="slider-content">
             <div class="slider-content-inner">  
+              			<?php if ($helper->get('tagline')): ?>
+				<h4 class="tagline"><?php echo $helper->get('tagline'); ?></h4>
+			<?php endif; ?>
 				      <?php if($helper->get('data.title', $i)): ?>
-				        <h1 class="slide-title text-white ">
+				        <h1 class="text-white ">
 				          <?php if($helper->get('data.btn-link', $i)): ?>
 					         <a href="<?php echo $helper->get('data.title-link', $i); ?>" title="<?php echo $helper->get('data.title-link', $i) ?>">
 				          <?php endif; ?>
@@ -46,7 +51,12 @@ defined('_JEXEC') or die;
               <?php if($helper->get('data.desc', $i)): ?>
                 <div class="h4 text-white mt-0 description"><?php echo $helper->get('data.desc', $i) ?></div>
               <?php endif; ?>
-
+                			<?php if ($helper->get('award')): ?>
+				<p class="award"><strong>AWARD:</strong> <?php echo $helper->get('award'); ?>
+			<?php endif; ?>
+			<?php if ($helper->get('duration')): ?>
+				<br/><span class="duration"><strong>DURATION:</strong> <?php echo $helper->get('duration' ); ?></span></p>
+			<?php endif; ?>
               <?php if($helper->get('data.button1', $i) || $helper->get('data.button2', $i)): ?>
               <div class="slide-action">
                 <?php if($helper->get('data.button1', $i)): ?>
@@ -60,6 +70,7 @@ defined('_JEXEC') or die;
 
             </div>
           </div>
+        </div>
 				</div>
 			 	<?php endfor ;?>
 		</div>
