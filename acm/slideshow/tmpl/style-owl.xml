@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <title>Slideshow Style 1</title>
+  <sampledata>
+ </sampledata>
+  <fields name="slideshow">
+  	<fieldset name="sl-opt" label="SLIDESHOW_BASIC_1_LABEL" description="SLIDESHOW_BASIC_DESC">
+			<field name="autoplay" type="list" default="true" label="SLIDESHOW_AUTOPLAY_TITLE" description="SLIDESHOW_AUTOPLAY_DES">
+				<option value="true">JYES</option>
+				<option value="false">JNO</option>
+			</field>
+
+			<field name="auto-time" type="text" default="5000" label="SLIDESHOW_AUTOPLAY_TIME_TITLE" description="SLIDESHOW_AUTOPLAY_TIME_DESC"></field>
+		</fieldset>
+
+		<fieldset name="basic" label="SLIDESHOW_BASIC_2_LABEL" description="SLIDESHOW_BASIC_2_DESC" multiple="1">
+			<field name="image" type="media" default="" label="SLIDESHOW_IMG_TITLE" description="SLIDESHOW_IMG_DESC" required="1"/>
+			<field name="title" type="text" default="" label="SLIDESHOW_TITLE" description="SLIDESHOW_TITLE_DESC"/>
+			<field name="desc" type="text" default="" label="SLIDESHOW_DESCRIPTIONS" description="SLIDESHOW_DESCRIPTIONS_DES"/>
+			<field name="button1" type="text" default="" label="SLIDESHOW_BUTTON_1" description="SLIDESHOW_BUTTON_1_DES"/>
+			<field name="btn-link1" type="text" default="" label="SLIDESHOW_BUTTON_LINK_1" description="SLIDESHOW_BUTTON_LINK_1_DES"/>	
+			<field name="btn-type1" type="list" default="primary" label="SLIDESHOW_BUTTON_TYPE_1" description="SLIDESHOW_BUTTON_TYPE_1_DES">
+				<option value="primary">Primary</option>
+				<option value="secondary">Secondary</option>
+				<option value="info">Info</option>
+				<option value="success">Success</option>
+			</field>	
+			<field name="button2" type="text" default="" label="SLIDESHOW_BUTTON_2" description="SLIDESHOW_BUTTON_2_DES"/>
+			<field name="btn-link2" type="text" default="" label="SLIDESHOW_BUTTON_LINK_2" description="SLIDESHOW_BUTTON_LINK_2_DES"/>	
+			<field name="btn-type2" type="list" default="primary" label="SLIDESHOW_BUTTON_TYPE_2" description="SLIDESHOW_BUTTON_TYPE_2_DES">
+				<option value="primary">Primary</option>
+				<option value="secondary">Secondary</option>
+				<option value="info">Info</option>
+				<option value="success">Success</option>
+			</field>	
+		</fieldset>
+  </fields>
+</form>

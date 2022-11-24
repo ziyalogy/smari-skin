@@ -92,6 +92,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
     background-image: url(/images/design/smari-red.svg);
     background-repeat: no-repeat;
     background-size: cover;
+    color: #fff;
     background-position: center center;
     background-attachment: scroll;
 }
@@ -394,4 +395,33 @@ input, input.form-control, #acym_wrapper .acym__front__archive #acym__front__arc
 .acm-features.coaches-highlight .info-wrap .list-item .item {
     padding: 1.714rem 3.428rem;
     border: none !important;
+}
+#back-to-top {
+    background-color: #35ab93;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;}
+.t4-header-r p {
+    margin-top: 0;
+    margin-bottom: 0rem;
+}
+.homepage_hero .acm-hero.style-2 {
+    padding: 25rem 0 7.5rem;
+}
+
+.smari-intro img {
+    -o-object-position: fill;
+    object-position: fill;
+    -o-object-fit: fill;
+    object-fit: fill;
+    top: 0;
+    left: 0;
+    height: fit-content!important;
+    width: fit-content!important;
+}
+.t4-section-4 {
+    background-color: #29bca1!important;
+}
+.t4-masthead{
+    background-color:#040404 !important;
 }

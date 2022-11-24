@@ -18,7 +18,7 @@ $count = $helper->getRows('link');
     <div class="social-follow d-flex">
     	<?php for ($i = 0; $i < $count; $i++): ?>
       	<div class="social-inner">
-      		<a href="<?php echo $helper->get(
+      		<a target="new"href="<?php echo $helper->get(
             'link',
             $i
         ); ?>" title="<?php echo $helper->get('title', $i); ?>">

@@ -192,9 +192,9 @@ $teamShot = $extrafields->get('team_shot');
 								<?php endif ;?>
 							</ul>
 						</div>
+                    
 					</div>
 				</div>
-
 				<div class="col-12 col-lg-6 order-1 order-lg-2">
 					<?php if ($params->get('access-view')) : ?>
 						<?php echo LayoutHelper::render('joomla.content.full_image', $this->item); ?>
