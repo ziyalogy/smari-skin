@@ -13,7 +13,7 @@ defined('_JEXEC') or die;
   $count = $helper->getRows('data.title');
 ?>
 
-<div class="acm-slideshow acm-owl">
+<div class="acm-slideshow acm-owl ">
 	<div id="acm-slideshow-<?php echo $module->id; ?>">
 		<div class="owl-carousel owl-theme">
 				<?php 
@@ -25,12 +25,12 @@ defined('_JEXEC') or die;
             $bgSlide = 'style="background-image: url('.$helper->get('data.image', $i).');"';
           };
         ?>
-				<div class="item">
+				<div class="item hero-item">
           <div class="background" <?php echo $bgSlide ;?>></div>          
-          <div class="slider-content">
+          <div class="slider-content container">
             <div class="slider-content-inner">  
 				      <?php if($helper->get('data.title', $i)): ?>
-				        <h3 class="slide-title text-white mt-0 mb-2 mb-lg-4">
+				        <h1 class="slide-title text-white ">
 				          <?php if($helper->get('data.btn-link', $i)): ?>
 					         <a href="<?php echo $helper->get('data.title-link', $i); ?>" title="<?php echo $helper->get('data.title-link', $i) ?>">
 				          <?php endif; ?>
@@ -40,7 +40,7 @@ defined('_JEXEC') or die;
         				  <?php if($helper->get('data.title-link', $i)): ?>
         					</a>
         				  <?php endif; ?>
-      				  </h3>
+      				  </h1>
       				<?php endif; ?>
 
               <?php if($helper->get('data.desc', $i)): ?>

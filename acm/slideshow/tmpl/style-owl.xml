@@ -16,6 +16,9 @@
 		<fieldset name="basic" label="SLIDESHOW_BASIC_2_LABEL" description="SLIDESHOW_BASIC_2_DESC" multiple="1">
 			<field name="image" type="media" default="" label="SLIDESHOW_IMG_TITLE" description="SLIDESHOW_IMG_DESC" required="1"/>
 			<field name="title" type="text" default="" label="SLIDESHOW_TITLE" description="SLIDESHOW_TITLE_DESC"/>
+			<field name="tagline" type="text" default="" label="Tagline" description="Add tagline"  />
+			<field name="award" type="text" default="" label="Award" description="Add award"  />
+			<field name="duration" type="text" default="" label="Duration" description="Add duration"   />
 			<field name="desc" type="text" default="" label="SLIDESHOW_DESCRIPTIONS" description="SLIDESHOW_DESCRIPTIONS_DES"/>
 			<field name="button1" type="text" default="" label="SLIDESHOW_BUTTON_1" description="SLIDESHOW_BUTTON_1_DES"/>
 			<field name="btn-link1" type="text" default="" label="SLIDESHOW_BUTTON_LINK_1" description="SLIDESHOW_BUTTON_LINK_1_DES"/>	

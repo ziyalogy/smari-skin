@@ -425,3 +425,14 @@ input, input.form-control, #acym_wrapper .acym__front__archive #acym__front__arc
 .t4-masthead{
     background-color:#040404 !important;
 }
+.acm-slideshow .slider-content {
+    position: relative;
+    margin: inherit;
+    padding: inherit;
+    width: 100%;
+    z-index: 2;
+    max-width: 100%;
+}
+.acm-slideshow .background {
+    opacity: 0.8;
+}

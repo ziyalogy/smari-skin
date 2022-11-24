@@ -25904,3 +25904,131 @@ div.product-related-products .item.product-field {
   margin-bottom: 0;
   font-size: 1.625rem;
 }
+.acm-slideshow .item {
+  background: var(--gray-900);
+  -ms-flex-line-pack: center;
+  align-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  height: 960px;
+  max-height: 92vh; }
+  @media (max-width: 991.98px) {
+    .acm-slideshow .item {
+      height: 600px; } }
+  @media (max-width: 575.98px) {
+    .acm-slideshow .item {
+      height: 400px; } }
+
+.acm-slideshow .background {
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.6; }
+
+.acm-slideshow .slider-content {
+  position: relative;
+  margin: auto;
+  padding: 0 16px;
+  width: 704px;
+  z-index: 2;
+  max-width: 100%; }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .acm-slideshow .slider-content {
+      padding-left: 96px;
+      padding-right: 96px; } }
+  .acm-slideshow .slider-content .slide-title {
+    font-size: var(--hero-font-size);
+    line-height: 1.042;
+    text-transform: uppercase; }
+    @media (max-width: 991.98px) {
+      .acm-slideshow .slider-content .slide-title {
+        font-size: var(--h1-font-size); } }
+  .acm-slideshow .slider-content .description {
+    opacity: 0.8; }
+    @media (max-width: 575.98px) {
+      .acm-slideshow .slider-content .description {
+        font-size: 14px; } }
+  .acm-slideshow .slider-content .slide-action {
+    margin-top: 3rem; }
+    @media (max-width: 767.98px) {
+      .acm-slideshow .slider-content .slide-action {
+        margin-top: 1.5rem; } }
+
+.acm-slideshow .owl-carousel .owl-nav {
+  bottom: 0;
+  right: 0;
+  position: absolute; }
+  .acm-slideshow .owl-carousel .owl-nav button {
+    background: var(--body-bg-color);
+    color: var(--headings-color);
+    line-height: 64px;
+    outline: none;
+    font-size: 20px;
+    height: 64px;
+    width: 64px; }
+    @media (max-width: 575.98px) {
+      .acm-slideshow .owl-carousel .owl-nav button {
+        line-height: 40px;
+        height: 40px;
+        width: 40px; } }
+    .acm-slideshow .owl-carousel .owl-nav button:hover, .acm-slideshow .owl-carousel .owl-nav button:focus, .acm-slideshow .owl-carousel .owl-nav button:active {
+      opacity: 0.9; }
+    .acm-slideshow .owl-carousel .owl-nav button.disabled {
+      cursor: not-allowed;
+      color: rgba(0, 0, 0, 0.4); }
+
+.acm-slideshow .slider-content-inner > * {
+  -ms-transform: translateY(45%) scale(0.95);
+  transform: translateY(45%) scale(0.95);
+  -webkit-transform: translateY(45%) scale(0.95);
+  opacity: 0;
+  -webkit-transition: 1500ms all;
+  -o-transition: 1500ms all;
+  transition: 1500ms all; }
+  .acm-slideshow .slider-content-inner > *:nth-child(1) {
+    -webkit-transition-delay: 100ms !important;
+    -o-transition-delay: 100ms !important;
+    transition-delay: 100ms !important; }
+  .acm-slideshow .slider-content-inner > *:nth-child(2) {
+    -webkit-transition-delay: 300ms !important;
+    -o-transition-delay: 300ms !important;
+    transition-delay: 300ms !important; }
+  .acm-slideshow .slider-content-inner > *:nth-child(3) {
+    -webkit-transition-delay: 600ms !important;
+    -o-transition-delay: 600ms !important;
+    transition-delay: 600ms !important; }
+  .acm-slideshow .slider-content-inner > *:nth-child(4) {
+    -webkit-transition-delay: 900ms !important;
+    -o-transition-delay: 900ms !important;
+    transition-delay: 900ms !important; }
+  .acm-slideshow .slider-content-inner > *:nth-child(5) {
+    -webkit-transition-delay: 1200ms !important;
+    -o-transition-delay: 1200ms !important;
+    transition-delay: 1200ms !important; }
+
+.acm-slideshow .active .slider-content-inner > * {
+  -ms-transform: translateY(0) scale(1);
+  transform: translateY(0) scale(1);
+  -webkit-transform: translateY(0) scale(1);
+  opacity: 1;
+  -webkit-transition: 1000ms all;
+  -o-transition: 1000ms all;
+  transition: 1000ms all; }
+
+.acm-slideshow .active .slider-content-inner .description {
+  opacity: 0.7 !important; }
+
+.owl-dots button:focus {
+  outline: none; }

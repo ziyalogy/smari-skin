@@ -48,9 +48,7 @@ if ($helper->get('ft-bg')) {
 				<p class="award"><strong>AWARD:</strong> <?php echo $helper->get('award'); ?>
 			<?php endif; ?>
 			<?php if ($helper->get('duration')): ?>
-				<br/><span class="duration"><strong>DURATION:</strong> <?php echo $helper->get(
-        'duration'
-    ); ?></span></p>
+				<br/><span class="duration"><strong>DURATION:</strong> <?php echo $helper->get('duration' ); ?></span></p>
 			<?php endif; ?>
 
 			<?php if ($helper->get('btn-link')): ?>
